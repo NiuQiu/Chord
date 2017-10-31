@@ -52,28 +52,27 @@ public class Entry {
             }
             else{
                 System.out.println("----------------------");
-                System.out.println(node.getId() + " unavailable");
+                System.out.println("node " + node.getId() + " unavailable");
                 System.out.println("");
             }
+        }
 
+        /**
+         * get key
+         */
+        System.out.println("----------------------");
+        System.out.println("Key path:");
+        List<Integer> path = ring.find(setting.getKeyid());
+        for(int i=0;i<path.size();i++){
+            if(i != path.size()-1){
+                System.out.print(path.get(i) + " ");
+            }else{
+                System.out.println(path.get(i));
+            }
 
         }
 
 
-        /*ChordNode node1 = ring.getChordRing().get(setting.getHashNodeID().get(0));
-        ChordNode node2 = ring.getChordRing().get(setting.getHashNodeID().get(1));
-        ChordNode node3 = ring.getChordRing().get(setting.getHashNodeID().get(2));
-        ChordNode node4 = ring.getChordRing().get(setting.getHashNodeID().get(3));
-
-        ring.join(node1, node1.getId(), setting.getHashSpace());
-        ring.join(node2, node2.getId(), setting.getHashSpace());
-        ring.join(node3, node3.getId(), setting.getHashSpace());
-        ring.join(node4, node4.getId(), setting.getHashSpace());
-
-        node1.printTable();
-        node2.printTable();
-        node3.printTable();
-        node4.printTable();*/
     }
 
 
