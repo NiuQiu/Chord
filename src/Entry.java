@@ -21,6 +21,7 @@ public class Entry {
         // store value to allData
         try {
             allData = getFileData(fileName);
+            System.out.println("this is master conflict one");
         }
         catch (Exception e1) {
             e1.printStackTrace();
@@ -38,6 +39,8 @@ public class Entry {
         addHashKey(allData, 4, setting);
         // get key and query id
         queryKeyid(allData, setting, lineCounter);
+        
+        System.out.println("this is master conflict two");
 
         ChordRing ring = new ChordRing(setting.getHashSpace());
         for(Integer id: setting.getHashNodeID()){
