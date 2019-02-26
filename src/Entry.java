@@ -21,7 +21,7 @@ public class Entry {
         // store value to allData
         try {
             allData = getFileData(fileName);
-            System.out.println("create origin conflict 1.....");
+            System.out.println("Create conflict 1.....");
         }
         catch (Exception e1) {
             e1.printStackTrace();
@@ -46,9 +46,9 @@ public class Entry {
             ring.join(node, node.getId(), setting.getHashSpace());
 
         }
-        
-        System.out.println("create origin conflict 2.....");
-        
+
+		System.out.println("Create conflict 2.....");
+		
         for(ChordNode node: ring.getChordRing()){
             if(node.isInit()){
                 node.printTable();
